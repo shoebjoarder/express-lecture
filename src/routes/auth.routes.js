@@ -15,5 +15,6 @@ router.get("/register", (req, res) => {
 });
 
 router.post("/login", verify.isValidUsername, controller.login);
+router.post("/signup", verify.isValidUsername, controller.signup);
 
 module.exports = router;
