@@ -38,6 +38,14 @@ A very simple login and registration application using Node.js, Express, and Mon
    http://localhost:3000
    ```
 
+6. Switch between branches to see the different versions of the project. Type the following command in the terminal to switch to a branch
+
+   ```bash
+   git checkout <branch-name>
+   ```
+
+   Or use the GitHub Desktop to switch between branches
+
 ## 📝 License
 
 This project is [MIT](LICENSE) licensed.
