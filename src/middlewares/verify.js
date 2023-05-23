@@ -29,7 +29,7 @@ exports.isValidUsername = (req, res, next) => {
   const errorMessage = validateUsername(username);
 
   if (errorMessage) {
-    return res.status(401).json({ error: errorMessage });
+    return res.status(401).render("greeting", { error: errorMessage });
   }
 
   next();

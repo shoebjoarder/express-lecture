@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Logged In User Greeting</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <style>
+    .container {
+      min-height: 84.5vh;
+    }
+  </style>
+</head>
+<body>
+  <%- include('partials/navbar') %>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <% if (locals.error) { %>
+            <div class="card-header">
+              Error
+            </div>
+            <div class="card-body">
+              <p class="card-text"><%= error %></p>
+          <% } else { %>
+            <div class="card-header">
+              Welcome, <%= username %>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><%= message %></h5>
+              <p class="card-text">Enjoy your time on our website.</p>
+          <% } %>
+            <button type="button" class="btn btn-primary" onclick="location.href='/'">Back to Index</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include('partials/footer') %>
+</body>
+</html>
